@@ -1,8 +1,24 @@
-const http = require('http');
-const colors=require('colors');
-console.log('hellow'.red);
-http.createServer((req,res)=>{
-    res.write('hey vivfgas');
+const express= require('express');
+const data= require('./data');
+const app = express();
+const route=require('./middleware');
+const dataBaseConnection= require('./mongodb');
+
+
+const getbusLIst= async()=>{
+      let data=  await dataBaseConnection();
+       data= await data.find({}).toArray();
+      console.log(data);
+}
+getbusLIst();
+
+app.use('/route',route);
+app.get('/',(req,res)=>{
    
-    res.end();
-}).listen(3000);
+    res.send(`welcome to home page`);
+})
+app.get('/about',(req,res)=>{
+    res.send([data]);
+});
+
+app.listen(3000);
