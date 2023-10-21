@@ -1,8 +1,8 @@
 
 const data= {
-    busName:'biavs',
+    busName:'biavs travels',
     busNumber:30,
-    publicTransport:'black',
+    publicTransport:null,
     startFrom:'',
     allStation:[
         {
@@ -27,7 +27,7 @@ const data= {
                  {wednesday:"wednesday"},
                 {thursday:"thursday"},
                 {friday:"friday"},
-                {"saturday":"saturday"}
+                {saturday:"saturday"}
    ],
 };
 
