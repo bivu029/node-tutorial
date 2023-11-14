@@ -11,8 +11,8 @@ const data= {
         {
             station:"howrah",
             time:"12:30" , },
-            {
-                station:"beltola",
+       {
+          station:"beltola",
                 time:"11:30" , }
 
     ],

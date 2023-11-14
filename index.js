@@ -8,7 +8,7 @@ const dataBaseConnection= require('./mongodb');
 const getbusLIst= async()=>{
       let data=  await dataBaseConnection();
        data= await data.find({}).toArray();
-      console.log(data);
+     
 }
 getbusLIst();
 
